@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<script>
+    //Random Dice number operations
+    function GetDiceNumber()
+    {
+        let number = Math.floor((Math.random()*10)%6);
+        alert("Your number is: "+number);
+        return number;
+    }
+
+    function printDiceAdded()
+    {
+        let num1= GetDiceNumber();
+        let num2= GetDiceNumber();
+        alert("Your added number is: "+(num1+num2));
+    }
+    printDiceAdded();
+
+    //Random 2 digit number operation
+    function GetRandom2DigitNumber()
+    {
+        return(Math.floor(Math.random()*100));
+    }
+
+    function SumAverage5RandomNumber()
+    {
+        let sum = 0;
+        for(var i=1; i<=5;i++)
+        {
+             sum += GetRandom2DigitNumber();
+        }
+        alert("Sum of 5 random 2 digit numbers: "+ sum);
+        let avg = sum/5;
+        alert("Average of these numbers: "+ avg);
+
+    }
+    SumAverage5RandomNumber();
+
+    //Mathematical Unit Conversions and Area Calculations
+    const perInch = 12;
+    const perFeet = 0.0833;
+
+    function FeetToInches(inch)
+    {
+        return(inch*perFeeT);
+    }
+
+    function InchesToFeet(feets)
+    {
+        return(feets*perInch);
+    }
+
+    function FeetToMeters(feets)
+    {
+        return(feets*0.305);
+    }
+
+    function CalculateArea()
+    {
+        let area = FeetToMeters(60*40);
+        alert("Area: "+area+"meters");
+        return area;
+    }
+
+    function Areaof25Plots()
+    {
+        let totalArea = 25* CalculateArea();
+        alert("Area of 25 Plots: "+totalArea+"meters");
+    }
+    Areaof25Plots();
+
+</script>
