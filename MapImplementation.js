@@ -37,3 +37,33 @@ while(!checkValue10(diceMap))
     diceMap.set(randomNumber,diceMap.get(randomNumber)+1);
 }
 console.log(diceMap);
+
+
+//BirthDay Anniversary
+let birthMap = new Map();
+
+function GetRandomMonth()
+{
+    return((Math.floor(Math.random()*100)%12) +1);
+}
+
+let monthCounter =1;
+while(monthCounter<=12)
+{
+    let peopleArray = new Array();
+    birthMap.set(monthCounter, peopleArray);
+    monthCounter++;
+}
+
+let peopleCounter=1;
+while(peopleCounter<=50)
+{
+    randomMonth = GetRandomMonth();
+    let getArray = birthMap.get(randomMonth);
+    //console.log(getArray);
+    getArray.push(peopleCounter);
+    birthMap.set(randomMonth,getArray);
+    peopleCounter++;
+}
+
+console.log(birthMap);
